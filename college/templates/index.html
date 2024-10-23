@@ -1,0 +1,22 @@
+<!-- add_person.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Person</title>
+</head>
+<body>
+<h1>Add a New Person</h1>
+<form method="POST">
+    {% csrf_token %}  <!-- CSRF protection token -->
+    <label for="first name">first name:</label><br>
+    <input type="text" id="first" name="first" required><br><br>
+
+    <label for="last name">last name:</label><br>
+    <input type="text" id="last" name="last" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
